@@ -1,3 +1,5 @@
+//@GopikaV
+//16th July 2018
 public class mult
 {
 	public static void main(String args[])
