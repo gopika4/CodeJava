@@ -1,4 +1,5 @@
-
+//@GopikaV
+//18th July 2018
 public class SpeedOfJet {
     public static void main(String args[])
     {
