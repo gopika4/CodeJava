@@ -1,0 +1,28 @@
+select s.sname from sailors s where s.sid in (select r.sid from reserve r where r.sid=103) 
+select s.sname from sailors s where exists (select * from reserve r where r.sid=103 and s.sid=r.sid); 
+create table product(prodid int primary key,prodname varchar(20));
+insert into product values(1,'comb');
+insert into product values(2,'chair');
+commit;
+drop table   product ;
+create table product(prodid int,prodname varchar(20));
+create table customer(custid int primary key,custname char(20));
+create table order1(orderid int primary key,custid int,prodname varchar(20));
+alter table order1 add constraint fk1 foreign key(custid) references customer(custid);
+
+
+create table authors(authorid int primary key,authorname varchar(20));
+insert into authors values(101,'abc');
+insert into authors values(102,'dbc');
+
+commit;
+create table books(bookid int primary key,authorid int,bookname varchar(20)); 
+insert into books values(201,101,'werer');
+insert into books values(202,102,'werersd');
+insert into books values(203,101,'werdger');
+commit;
+alter table books add constraints fk2 foreign key(authorid) references authors(authorid);
+select  * from books;
+
+CREATE VIEW EMP1 AS SELECT * FROM EMPLOY;
+CREATE VIEW ABC AS SELECT * FROM SAILORS;
