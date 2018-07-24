@@ -1,5 +1,3 @@
-//@GopikaV
-//18th July 2018
 class A
 {
     int a=50;
@@ -11,7 +9,7 @@ class B extends A
 }
 class C extends B
 {
-    int c=20;
+    int a=20;
 }
 public class MultiHeritence {
 
